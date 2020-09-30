@@ -16,5 +16,26 @@ namespace BibliotheekApp
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (LibrarycentrumEntities ctx = new LibrarycentrumEntities())
+            {
+                string genre = "";
+                if (textBox1.Text.Trim() != "")
+                {
+                    genre = textBox1.Text.Trim();
+                }
+                else
+                {
+                    MessageBox.Show("Geef een GENRE a.u.b");
+                }
+                
+
+                ctx.Genres.Add(new Genre() { Genre1 = genre});
+                ctx.SaveChanges();
+                MessageBox.Show("Genre Toevoegd");
+            }
+        }
     }
 }

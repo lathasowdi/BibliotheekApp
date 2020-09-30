@@ -38,6 +38,10 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cbuitgeverij = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.lbgenres = new System.Windows.Forms.ListBox();
+            this.btnadd = new System.Windows.Forms.Button();
+            this.btncancel = new System.Windows.Forms.Button();
+            this.cbauteurs = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
@@ -123,11 +127,50 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "UITGEVERIJ";
             // 
+            // lbgenres
+            // 
+            this.lbgenres.FormattingEnabled = true;
+            this.lbgenres.Location = new System.Drawing.Point(183, 197);
+            this.lbgenres.Name = "lbgenres";
+            this.lbgenres.Size = new System.Drawing.Size(120, 95);
+            this.lbgenres.TabIndex = 12;
+            // 
+            // btnadd
+            // 
+            this.btnadd.Location = new System.Drawing.Point(34, 307);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(75, 23);
+            this.btnadd.TabIndex = 13;
+            this.btnadd.Text = "ADD";
+            this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
+            // 
+            // btncancel
+            // 
+            this.btncancel.Location = new System.Drawing.Point(183, 307);
+            this.btncancel.Name = "btncancel";
+            this.btncancel.Size = new System.Drawing.Size(75, 23);
+            this.btncancel.TabIndex = 14;
+            this.btncancel.Text = "CANCEL";
+            this.btncancel.UseVisualStyleBackColor = true;
+            // 
+            // cbauteurs
+            // 
+            this.cbauteurs.FormattingEnabled = true;
+            this.cbauteurs.Location = new System.Drawing.Point(25, 209);
+            this.cbauteurs.Name = "cbauteurs";
+            this.cbauteurs.Size = new System.Drawing.Size(121, 21);
+            this.cbauteurs.TabIndex = 15;
+            // 
             // AddBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 244);
+            this.ClientSize = new System.Drawing.Size(380, 362);
+            this.Controls.Add(this.cbauteurs);
+            this.Controls.Add(this.btncancel);
+            this.Controls.Add(this.btnadd);
+            this.Controls.Add(this.lbgenres);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbuitgeverij);
             this.Controls.Add(this.dateTimePicker1);
@@ -160,5 +203,9 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox cbuitgeverij;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListBox lbgenres;
+        private System.Windows.Forms.Button btnadd;
+        private System.Windows.Forms.Button btncancel;
+        private System.Windows.Forms.ComboBox cbauteurs;
     }
 }

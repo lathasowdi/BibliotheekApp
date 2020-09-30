@@ -58,6 +58,7 @@
             this.btnadd.TabIndex = 2;
             this.btnadd.Text = "ADD";
             this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // btncancel
             // 
@@ -79,6 +80,7 @@
             this.Controls.Add(this.label1);
             this.Name = "NewPublisher";
             this.Text = "NewPublisher";
+            this.Load += new System.EventHandler(this.NewPublisher_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
