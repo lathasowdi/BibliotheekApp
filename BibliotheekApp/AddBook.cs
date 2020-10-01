@@ -73,7 +73,7 @@ namespace BibliotheekApp
                 string publicatie = "";
                 if (dateTimePicker1.Value.ToString() != "")
                 {
-                    publicatie = dateTimePicker1.Value.ToString();
+                    publicatie = dateTimePicker1.Value.Date.Year.ToString();
                 }
                 else
                 {

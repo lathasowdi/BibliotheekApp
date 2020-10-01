@@ -35,6 +35,7 @@
             this.btnaddpub = new System.Windows.Forms.Button();
             this.btnaddgenre = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbBoeken
@@ -105,11 +106,22 @@
             this.btndelete.UseVisualStyleBackColor = true;
             this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(152, 186);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(164, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "FILTER";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(318, 238);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnaddgenre);
             this.Controls.Add(this.btnaddpub);
@@ -133,6 +145,7 @@
         private System.Windows.Forms.Button btnaddpub;
         private System.Windows.Forms.Button btnaddgenre;
         private System.Windows.Forms.Button btndelete;
+        private System.Windows.Forms.Button button1;
     }
 }
 
