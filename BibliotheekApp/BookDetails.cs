@@ -39,9 +39,10 @@ namespace BibliotheekApp
                                .Join(ctx.Auteurs,
                              ba => ba.a.AuteurId,
                              a2 => a2.AuteursId,
-                              (ba, a2) => new { ba, a2 }); 
-                textBox6.Text = joinQuery2.Where(x => x.ba.b.BoekenId == MyBook.BoekenId).FirstOrDefault().a2.Voornaam;
-                
+                              (ba, a2) => new { ba, a2,Voornaam=a2.Voornaam+""+a2.Achternaam }); 
+
+                lbauteur.DisplayMember = "Voornaam";
+               lbauteur.DataSource = joinQuery2.Where(x => x.ba.b.BoekenId == MyBook.BoekenId).ToList();
                 var joinQuery3 = ctx.Boekens
                               .Join(ctx.BoekenGenres,
                               b => b.BoekenId,
@@ -50,8 +51,9 @@ namespace BibliotheekApp
                                .Join(ctx.Genres,
                              bbg => bbg.bg.GenreId,
                              g => g.GenreId,
-                              (bbg, g) => new { bbg, g });
-                textBox7.Text = joinQuery3.Where(x => x.bbg.b.BoekenId == MyBook.BoekenId).FirstOrDefault().g.Genre1;
+                              (bbg, g) => new { bbg, g, Genre1=g.Genre1 });
+               lbgenre.DisplayMember = "Genre1";
+                lbgenre.DataSource = joinQuery3.Where(x => x.bbg.b.BoekenId == MyBook.BoekenId).ToList();
 
             }
         }

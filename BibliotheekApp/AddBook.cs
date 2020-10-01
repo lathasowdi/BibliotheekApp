@@ -16,7 +16,7 @@ namespace BibliotheekApp
         {
             InitializeComponent();
         }
-
+        public Boeken niewBook = new Boeken();
         private void AddBook_Load(object sender, EventArgs e)
         {
             using (LibrarycentrumEntities ctx = new LibrarycentrumEntities())
@@ -26,9 +26,9 @@ namespace BibliotheekApp
                 cbuitgeverij.ValueMember = "UitgeverijenId";
                 cbuitgeverij.DataSource = UitgeverijQuery;
                 var AuteurQuery = ctx.Auteurs.Select(a => a).ToList();
-                cbauteurs.DisplayMember = "Voornaam";
-                cbauteurs.ValueMember = "AuteursId";
-                cbauteurs.DataSource = AuteurQuery;
+               lbauteurs.DisplayMember = "Voornaam";
+               lbauteurs.ValueMember = "AuteursId";
+                lbauteurs.DataSource = AuteurQuery;
                 var GenresQuery = ctx.Genres.Select(g => g).ToList();
                 lbgenres.DisplayMember = "Genre1";
                 lbgenres.ValueMember = "GenreId";
@@ -79,12 +79,33 @@ namespace BibliotheekApp
                 {
                     MessageBox.Show("Geef een Publicatie a.u.b");
                 }
-
-                int uitgeverId = (int)cbuitgeverij.SelectedValue;
-
-                ctx.Boekens.Add(new Boeken() { Titel = titel, AantalPaginas = aantalPaginas, Score = score, Publicatie = publicatie, UitgeverId = uitgeverId });
+              
+                niewBook.Titel = titel;
+                niewBook.AantalPaginas = aantalPaginas;
+                niewBook.Score = score;
+                niewBook.Publicatie = publicatie;
+                niewBook.UitgeverId = (int)cbuitgeverij.SelectedValue;
+                ctx.Boekens.Add(niewBook);
                 ctx.SaveChanges();
                 MessageBox.Show("Boek Toevoegd");
+               
+                foreach (var item in lbauteurs.SelectedItems)
+                {
+                    ctx.BoekenAuteurs.Add(new BoekenAuteur() { BoekId = niewBook.BoekenId,AuteurId = (item as Auteur).AuteursId });
+                    ctx.SaveChanges();
+                }
+                ctx.SaveChanges();
+                MessageBox.Show("Auteurs Toevoegd");
+                foreach (var item in lbgenres.SelectedItems)
+                {
+                    ctx.BoekenGenres.Add(new BoekenGenre() { BoekId = niewBook.BoekenId, GenreId = (item as Genre).GenreId });
+                    ctx.SaveChanges();
+                }
+                ctx.SaveChanges();
+                MessageBox.Show("Genre Toevoegd");
+
+
+
             }
         }
     }

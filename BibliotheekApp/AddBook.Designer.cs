@@ -41,7 +41,7 @@
             this.lbgenres = new System.Windows.Forms.ListBox();
             this.btnadd = new System.Windows.Forms.Button();
             this.btncancel = new System.Windows.Forms.Button();
-            this.cbauteurs = new System.Windows.Forms.ComboBox();
+            this.lbauteurs = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
@@ -84,24 +84,59 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(137, 18);
+            this.textBox1.Location = new System.Drawing.Point(126, 18);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(200, 20);
             this.textBox1.TabIndex = 4;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(137, 56);
+            this.numericUpDown1.Increment = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Location = new System.Drawing.Point(126, 56);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.Size = new System.Drawing.Size(200, 20);
             this.numericUpDown1.TabIndex = 5;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(137, 92);
+            this.numericUpDown2.Location = new System.Drawing.Point(126, 92);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Minimum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown2.Size = new System.Drawing.Size(200, 20);
             this.numericUpDown2.TabIndex = 6;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             // 
             // dateTimePicker1
             // 
@@ -113,9 +148,9 @@
             // cbuitgeverij
             // 
             this.cbuitgeverij.FormattingEnabled = true;
-            this.cbuitgeverij.Location = new System.Drawing.Point(137, 159);
+            this.cbuitgeverij.Location = new System.Drawing.Point(126, 159);
             this.cbuitgeverij.Name = "cbuitgeverij";
-            this.cbuitgeverij.Size = new System.Drawing.Size(121, 21);
+            this.cbuitgeverij.Size = new System.Drawing.Size(200, 21);
             this.cbuitgeverij.TabIndex = 9;
             // 
             // label5
@@ -132,6 +167,8 @@
             this.lbgenres.FormattingEnabled = true;
             this.lbgenres.Location = new System.Drawing.Point(183, 197);
             this.lbgenres.Name = "lbgenres";
+            this.lbgenres.ScrollAlwaysVisible = true;
+            this.lbgenres.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lbgenres.Size = new System.Drawing.Size(120, 95);
             this.lbgenres.TabIndex = 12;
             // 
@@ -154,20 +191,22 @@
             this.btncancel.Text = "CANCEL";
             this.btncancel.UseVisualStyleBackColor = true;
             // 
-            // cbauteurs
+            // lbauteurs
             // 
-            this.cbauteurs.FormattingEnabled = true;
-            this.cbauteurs.Location = new System.Drawing.Point(25, 209);
-            this.cbauteurs.Name = "cbauteurs";
-            this.cbauteurs.Size = new System.Drawing.Size(121, 21);
-            this.cbauteurs.TabIndex = 15;
+            this.lbauteurs.FormattingEnabled = true;
+            this.lbauteurs.Location = new System.Drawing.Point(15, 197);
+            this.lbauteurs.Name = "lbauteurs";
+            this.lbauteurs.ScrollAlwaysVisible = true;
+            this.lbauteurs.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.lbauteurs.Size = new System.Drawing.Size(120, 95);
+            this.lbauteurs.TabIndex = 15;
             // 
             // AddBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(380, 362);
-            this.Controls.Add(this.cbauteurs);
+            this.Controls.Add(this.lbauteurs);
             this.Controls.Add(this.btncancel);
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.lbgenres);
@@ -206,6 +245,6 @@
         private System.Windows.Forms.ListBox lbgenres;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btncancel;
-        private System.Windows.Forms.ComboBox cbauteurs;
+        private System.Windows.Forms.ListBox lbauteurs;
     }
 }

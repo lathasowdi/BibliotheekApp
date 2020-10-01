@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BibliotheekApp
 {
-    public partial class Form1 : Form
+    public partial class menu : Form
     {
-        public Form1()
+        public menu()
         {
             InitializeComponent();
         }
@@ -73,6 +73,24 @@ namespace BibliotheekApp
             NewGenre newGenre = new NewGenre();
             if (newGenre.ShowDialog() == DialogResult.OK)
             {
+
+            }
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            using (LibrarycentrumEntities ctx = new LibrarycentrumEntities())
+            {
+                int value = Convert.ToInt32(lbBoeken.SelectedValue);
+                ctx.Boekens.RemoveRange(ctx.Boekens.Where(b => b.BoekenId == value));
+                ctx.SaveChanges();
+                ctx.BoekenAuteurs.RemoveRange(ctx.BoekenAuteurs.Where(ba => ba.BoekenAuteursId == value));
+                ctx.SaveChanges();
+                ctx.BoekenGenres.RemoveRange(ctx.BoekenGenres.Where(bg => bg.BoekenGenresId== value));
+                ctx.SaveChanges();
+
+
+                MessageBox.Show("Boek  is verwijderen");
 
             }
         }

@@ -94,11 +94,11 @@
     <Compile Include="BookDetails.Designer.cs">
       <DependentUpon>BookDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="menu.Designer.cs">
+      <DependentUpon>menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Genre.cs">
       <DependentUpon>BoekenDataModel.tt</DependentUpon>
@@ -132,8 +132,8 @@
     <EmbeddedResource Include="BookDetails.resx">
       <DependentUpon>BookDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="menu.resx">
+      <DependentUpon>menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewAuthor.resx">
       <DependentUpon>NewAuthor.cs</DependentUpon>
