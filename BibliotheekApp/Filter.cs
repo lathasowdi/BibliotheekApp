@@ -43,5 +43,34 @@ namespace BibliotheekApp
 
             }
         }
+
+        private void btnscore_Click(object sender, EventArgs e)
+        {
+            SortScore sortScore = new SortScore();
+            if (sortScore.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+
+        }
+
+        private void btnpagina_Click(object sender, EventArgs e)
+        {
+            SortPagina sortPagina = new SortPagina();
+            if (sortPagina.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SortPublicatie sortPublicatie = new SortPublicatie();
+            if (sortPublicatie.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
     }
 }

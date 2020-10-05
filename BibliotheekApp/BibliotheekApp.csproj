@@ -94,6 +94,12 @@
     <Compile Include="BookDetails.Designer.cs">
       <DependentUpon>BookDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookEdit.Designer.cs">
+      <DependentUpon>BookEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Filter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SortPagina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SortPagina.Designer.cs">
+      <DependentUpon>SortPagina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SortPublicatie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SortPublicatie.Designer.cs">
+      <DependentUpon>SortPublicatie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SortScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SortScore.Designer.cs">
+      <DependentUpon>SortScore.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uitgeverijen.cs">
       <DependentUpon>BoekenDataModel.tt</DependentUpon>
     </Compile>
@@ -155,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookDetails.resx">
       <DependentUpon>BookDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookEdit.resx">
+      <DependentUpon>BookEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Filter.resx">
       <DependentUpon>Filter.cs</DependentUpon>
@@ -189,6 +216,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SortPagina.resx">
+      <DependentUpon>SortPagina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SortPublicatie.resx">
+      <DependentUpon>SortPublicatie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SortScore.resx">
+      <DependentUpon>SortScore.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="BoekenDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>BoekenDataModel.Designer.cs</LastGenOutput>

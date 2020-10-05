@@ -36,6 +36,7 @@
             this.btnaddgenre = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnedit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbBoeken
@@ -68,7 +69,7 @@
             // 
             // btnaddauthor
             // 
-            this.btnaddauthor.Location = new System.Drawing.Point(152, 70);
+            this.btnaddauthor.Location = new System.Drawing.Point(152, 96);
             this.btnaddauthor.Name = "btnaddauthor";
             this.btnaddauthor.Size = new System.Drawing.Size(164, 23);
             this.btnaddauthor.TabIndex = 3;
@@ -78,7 +79,7 @@
             // 
             // btnaddpub
             // 
-            this.btnaddpub.Location = new System.Drawing.Point(152, 99);
+            this.btnaddpub.Location = new System.Drawing.Point(152, 125);
             this.btnaddpub.Name = "btnaddpub";
             this.btnaddpub.Size = new System.Drawing.Size(164, 23);
             this.btnaddpub.TabIndex = 4;
@@ -88,7 +89,7 @@
             // 
             // btnaddgenre
             // 
-            this.btnaddgenre.Location = new System.Drawing.Point(152, 128);
+            this.btnaddgenre.Location = new System.Drawing.Point(152, 154);
             this.btnaddgenre.Name = "btnaddgenre";
             this.btnaddgenre.Size = new System.Drawing.Size(164, 23);
             this.btnaddgenre.TabIndex = 5;
@@ -98,7 +99,7 @@
             // 
             // btndelete
             // 
-            this.btndelete.Location = new System.Drawing.Point(152, 157);
+            this.btndelete.Location = new System.Drawing.Point(152, 183);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(164, 23);
             this.btndelete.TabIndex = 6;
@@ -108,7 +109,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(152, 186);
+            this.button1.Location = new System.Drawing.Point(152, 212);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 23);
             this.button1.TabIndex = 7;
@@ -116,11 +117,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // btnedit
+            // 
+            this.btnedit.Location = new System.Drawing.Point(152, 67);
+            this.btnedit.Name = "btnedit";
+            this.btnedit.Size = new System.Drawing.Size(164, 23);
+            this.btnedit.TabIndex = 8;
+            this.btnedit.Text = "BOEKBEWERKEN";
+            this.btnedit.UseVisualStyleBackColor = true;
+            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(318, 238);
+            this.Controls.Add(this.btnedit);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnaddgenre);
@@ -146,6 +158,7 @@
         private System.Windows.Forms.Button btnaddgenre;
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnedit;
     }
 }
 

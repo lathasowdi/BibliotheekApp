@@ -103,5 +103,18 @@ namespace BibliotheekApp
 
             }
         }
+
+        private void btnedit_Click(object sender, EventArgs e)
+        {
+            var selectedBook = (Boeken)lbBoeken.SelectedItem;
+            BookEdit bookEdit = new BookEdit();
+            bookEdit.MyBook = selectedBook;
+            if (bookEdit.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+           
+            
+        }
     }
 }
